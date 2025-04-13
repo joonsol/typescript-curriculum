@@ -1,5 +1,8 @@
-let product :[string, number]=["Keyboard",45000]
-const [productName, price]= product
+function filterFruits(fruites:string[]):string[]{
+    return fruites.filter(fruit=>fruit.startsWith('b'))
+}
+
+let fruitList :string[]=["apple", "banana","blueberry","cherry"]
 
 
-console.log(`상품명 : ${productName}, 가격: ${price}`)
+console.log(`b로 시작하는 과일:${filterFruits(fruitList)}`)

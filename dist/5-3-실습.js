@@ -1,9 +1,7 @@
 "use strict";
-var Color;
-(function (Color) {
-    Color[Color["Red"] = 0] = "Red";
-    Color[Color["Green"] = 1] = "Green";
-    Color[Color["Blue"] = 2] = "Blue";
-})(Color || (Color = {}));
-let colorName = Color[1];
-console.log(colorName);
+function displayUserInfo(user) {
+    console.log(`이름 :${user[0]} 나이:${user[1]} 직업:${user[2]}`);
+}
+let userInfo = ["Jane", 28, "디자이너"
+];
+displayUserInfo(userInfo);

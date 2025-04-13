@@ -1,3 +1,24 @@
-let user: any = { name: "Tom" };
+enum Status {
+    Pending = "PENDING",
+    Approved = "APPROVED",
+    Rejected = "REJECTED"
+}
 
-console.log(user.age.toFixed(2)); // 런타임 오류 발생! age는 undefined인데도 타입 체크가 되지 않음
+
+function getStatusMessage(status: Status): string {
+    switch (status) {
+        case Status.Pending:
+            return "Your request is pending"
+
+        case Status.Approved:
+            return "Your request is approved"
+
+        case Status.Rejected:
+            return "Your request is rejected"
+
+    }
+
+
+}
+
+console.log(getStatusMessage(Status.Approved))

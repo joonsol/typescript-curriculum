@@ -1,3 +1,18 @@
 "use strict";
-let user = { name: "Tom" };
-console.log(user.age.toFixed(2)); // 런타임 오류 발생! age는 undefined인데도 타입 체크가 되지 않음
+var Status;
+(function (Status) {
+    Status["Pending"] = "PENDING";
+    Status["Approved"] = "APPROVED";
+    Status["Rejected"] = "REJECTED";
+})(Status || (Status = {}));
+function getStatusMessage(status) {
+    switch (status) {
+        case Status.Pending:
+            return "Your request is pending";
+        case Status.Approved:
+            return "Your request is approved";
+        case Status.Rejected:
+            return "Your request is rejected";
+    }
+}
+console.log(getStatusMessage(Status.Approved));

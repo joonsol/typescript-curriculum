@@ -1,10 +1,10 @@
-function displayUserInfo(user:[string, number, string]):void{
-    console.log(`이름 :${user[0]} 나이:${user[1]} 직업:${user[2]}`)
+function printTypes(arr:any[]):void{
+    arr.forEach((item,index)=>{
+        console.log(`Index ${index}: ${item}(type: ${typeof item})`)
+    })
 }
 
 
-let userInfo :[string, number, string]=["Jane",28,"디자이너"
-]
+let mixed:any[]=[42,"hello",true]
 
-
-displayUserInfo(userInfo)
+printTypes(mixed)

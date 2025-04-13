@@ -1,24 +1,5 @@
-enum Status {
-    Pending = "PENDING",
-    Approved = "APPROVED",
-    Rejected = "REJECTED"
-}
+let product :[string, number]=["Keyboard",45000]
+const [productName, price]= product
 
 
-function getStatusMessage(status: Status): string {
-    switch (status) {
-        case Status.Pending:
-            return "Your request is pending"
-
-        case Status.Approved:
-            return "Your request is approved"
-
-        case Status.Rejected:
-            return "Your request is rejected"
-
-    }
-
-
-}
-
-console.log(getStatusMessage(Status.Approved))
+console.log(`상품명 : ${productName}, 가격: ${price}`)

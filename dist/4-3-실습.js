@@ -1,7 +1,8 @@
 "use strict";
-function displayUserInfo(user) {
-    console.log(`이름 :${user[0]} 나이:${user[1]} 직업:${user[2]}`);
+function printTypes(arr) {
+    arr.forEach((item, index) => {
+        console.log(`Index ${index}: ${item}(type: ${typeof item})`);
+    });
 }
-let userInfo = ["Jane", 28, "디자이너"
-];
-displayUserInfo(userInfo);
+let mixed = [42, "hello", true];
+printTypes(mixed);
